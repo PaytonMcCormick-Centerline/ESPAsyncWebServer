@@ -37,7 +37,7 @@ if [ "$BUILD_PIO" -eq 0 ]; then
 
 	if [[ "$TARGET_PLATFORM" == "esp32" ]]; then
 		echo "Installing AsyncTCP ..."
-		git clone https://github.com/me-no-dev/AsyncTCP "$ARDUINO_USR_PATH/libraries/AsyncTCP" > /dev/null 2>&1
+		git clone https://github.com/PaytonMcCormick-Centerline/AsyncTCP "$ARDUINO_USR_PATH/libraries/AsyncTCP" > /dev/null 2>&1
 		FQBN="espressif:esp32:esp32:PSRAM=enabled,PartitionScheme=huge_app"
 		source ./.github/scripts/install-arduino-core-esp32.sh
 		echo "BUILDING ESP32 EXAMPLES"
@@ -59,7 +59,7 @@ else
 	if [[ "$TARGET_PLATFORM" == "esp32" ]]; then
 		BOARD="esp32dev"
 		echo "Installing AsyncTCP ..."
-		python -m platformio lib -g install https://github.com/me-no-dev/AsyncTCP.git > /dev/null 2>&1
+		python -m platformio lib -g install https://github.com/PaytonMcCormick-Centerline/AsyncTCP.git > /dev/null 2>&1
 		echo "BUILDING ESP32 EXAMPLES"
 	else
 		BOARD="esp12e"
