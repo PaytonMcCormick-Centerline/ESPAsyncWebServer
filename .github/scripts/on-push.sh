@@ -7,7 +7,7 @@ if [ ! -z "$TRAVIS_BUILD_DIR" ]; then
 	export GITHUB_REPOSITORY="$TRAVIS_REPO_SLUG"
 elif [ -z "$GITHUB_WORKSPACE" ]; then
 	export GITHUB_WORKSPACE="$PWD"
-	export GITHUB_REPOSITORY="me-no-dev/ESPAsyncWebServer"
+	export GITHUB_REPOSITORY="PaytonMcCormick-Centerline/ESPAsyncWebServer"
 fi
 
 TARGET_PLATFORM="$1"
